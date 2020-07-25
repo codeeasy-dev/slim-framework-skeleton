@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    image: php:7.4-alpine
+    container_name: slim-web
+    ports:
+      - 8080:8080
+    working_dir: /home/web
+    volumes:
+      - .:/home/web
+    command: sh ./docker/web/entrypoint.sh
