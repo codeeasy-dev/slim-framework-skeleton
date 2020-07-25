@@ -1,2 +1,3 @@
-# slim-4-skeleton
-Slim Framework 4 skeleton by Code Easy.
+# Slim Framework Skeleton
+
+Slim Framework skeleton by Code Easy.
