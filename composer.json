@@ -9,6 +9,12 @@
       "email": "felipe@codeeasy.com.br"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Test\\": "tests/"
+    }
+  },
   "require": {
     "slim/slim": "4.*",
     "slim/psr7": "^1.1",
@@ -21,6 +27,7 @@
   "require-dev": {
     "php": "7.4.*",
     "vimeo/psalm": "^3.12",
-    "squizlabs/php_codesniffer": "^3.5"
+    "squizlabs/php_codesniffer": "^3.5",
+    "phpunit/phpunit": "^9.2"
   }
 }
