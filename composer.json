@@ -1,0 +1,17 @@
+{
+    "name": "codeeasy/slim-framework-skeleton",
+    "description": "Slim Framework skeleton by Code Easy",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felipe Vieira",
+            "email": "felipe@codeeasy.com.br"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "vimeo/psalm": "^3.12",
+        "squizlabs/php_codesniffer": "^3.5"
+    }
+}
