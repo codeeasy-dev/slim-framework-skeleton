@@ -22,7 +22,9 @@
     "nyholm/psr7-server": "^1.0",
     "guzzlehttp/psr7": "^1.6",
     "http-interop/http-factory-guzzle": "^1.0",
-    "laminas/laminas-diactoros": "^2.3"
+    "laminas/laminas-diactoros": "^2.3",
+    "php-di/php-di": "^6.2",
+    "vlucas/phpdotenv": "^5.1"
   },
   "require-dev": {
     "php": "7.4.*",
