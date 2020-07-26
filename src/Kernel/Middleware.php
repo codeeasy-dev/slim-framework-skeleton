@@ -21,9 +21,9 @@ trait Middleware
 
         $app->addRoutingMiddleware();
         $app->addErrorMiddleware(
-            getenv('DISPLAY_ERROR_DETAILS'),
-            getenv('LOG_ERRORS'),
-            getenv('LOG_ERRORS_DETAILS')
+            $_ENV['DISPLAY_ERROR_DETAILS'],
+            $_ENV['LOG_ERRORS'],
+            $_ENV['LOG_ERRORS_DETAILS']
         );
 
         return $app;

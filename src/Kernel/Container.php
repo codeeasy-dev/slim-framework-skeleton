@@ -10,7 +10,8 @@ trait Container
      * @var array<string, string> $services
      */
     private array $services = [
-        \App\Service\Hello\IHelloService::class => \App\Service\Hello\HelloService::class
+        \App\Service\Hello\IHelloService::class => \App\Service\Hello\HelloService::class,
+        \App\Service\Plates\IPlatesService::class => \App\Service\Plates\PlatesService::class,
     ];
 
     private function buildContainer(): DIContainer

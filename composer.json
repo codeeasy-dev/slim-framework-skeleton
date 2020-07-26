@@ -24,7 +24,8 @@
     "http-interop/http-factory-guzzle": "^1.0",
     "laminas/laminas-diactoros": "^2.3",
     "php-di/php-di": "^6.2",
-    "vlucas/phpdotenv": "^5.1"
+    "vlucas/phpdotenv": "^5.1",
+    "league/plates": "^3.3"
   },
   "require-dev": {
     "php": "7.4.*",

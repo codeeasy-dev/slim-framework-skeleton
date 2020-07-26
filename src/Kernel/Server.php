@@ -41,7 +41,7 @@ class Server
 
     private function configDotenv(): void
     {
-        Dotenv::createImmutable(__DIR__ . '/../../')
-            ->load();
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+        $dotenv->load();
     }
 }
