@@ -12,6 +12,7 @@ class Provider
     private array $services = [
         \App\Service\Hello\IHelloService::class => \App\Service\Hello\HelloService::class,
         \App\Service\Plates\IPlatesService::class => \App\Service\Plates\PlatesService::class,
+        \App\Service\Email\IEmailService::class => \App\Service\Email\EmailService::class,
     ];
 
     public function buildContainer(): Container
