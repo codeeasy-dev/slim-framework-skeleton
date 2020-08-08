@@ -6,7 +6,7 @@ use App\Http\Controller\HomeController;
 use App\Http\Controller\JsonController;
 use Slim\App;
 
-trait MainRoutes
+class MainRoutes
 {
     public function buildMainRoutes(App $app): App
     {

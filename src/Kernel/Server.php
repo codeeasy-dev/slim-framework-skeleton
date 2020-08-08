@@ -3,27 +3,28 @@
 namespace App\Kernel;
 
 use App\Routes\MainRoutes;
-use DI\Container as DIContainer;
+use DI\Container;
 use Dotenv\Dotenv;
 use Slim\App;
 use Slim\Factory\AppFactory;
 
 class Server
 {
-    use Middleware;
-    use Container;
-    use MainRoutes;
-
     public function __construct()
     {
+        $provider = new Provider();
+        $middleware = new Middleware();
+
+        $mainRoutes = new MainRoutes();
+
         $this->configDotenv();
 
-        $container = $this->buildContainer();
+        $container = $provider->buildContainer();
         $this->setContainer($container);
         $app = $this->buildApp();
-        $app = $this->setGlobalMiddlewares($app);
+        $app = $middleware->setGlobalMiddlewares($app);
 
-        $app = $this->buildMainRoutes($app);
+        $app = $mainRoutes->buildMainRoutes($app);
 
         $app->run();
     }
@@ -34,7 +35,7 @@ class Server
         return $app;
     }
 
-    private function setContainer(DIContainer $container): void
+    private function setContainer(Container $container): void
     {
         AppFactory::setContainer($container);
     }

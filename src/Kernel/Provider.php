@@ -2,9 +2,9 @@
 
 namespace App\Kernel;
 
-use DI\Container as DIContainer;
+use DI\Container;
 
-trait Container
+class Provider
 {
     /**
      * @var array<string, string> $services
@@ -14,9 +14,9 @@ trait Container
         \App\Service\Plates\IPlatesService::class => \App\Service\Plates\PlatesService::class,
     ];
 
-    private function buildContainer(): DIContainer
+    public function buildContainer(): Container
     {
-        $container = new DIContainer();
+        $container = new Container();
 
         foreach ($this->services as $abstraction => $implementation) {
             $container->set($abstraction, new $implementation());

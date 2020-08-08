@@ -4,7 +4,7 @@ namespace App\Kernel;
 
 use Slim\App;
 
-trait Middleware
+class Middleware
 {
     /**
      * @var array<string> $middlewares
@@ -13,7 +13,7 @@ trait Middleware
         \App\Http\Middleware\JsonBodyParserMiddleware::class,
     ];
 
-    private function setGlobalMiddlewares(App $app): App
+    public function setGlobalMiddlewares(App $app): App
     {
         foreach ($this->middlewares as $middleware) {
             $app->add(new $middleware());
@@ -21,9 +21,9 @@ trait Middleware
 
         $app->addRoutingMiddleware();
         $app->addErrorMiddleware(
-            $_ENV['DISPLAY_ERROR_DETAILS'],
-            $_ENV['LOG_ERRORS'],
-            $_ENV['LOG_ERRORS_DETAILS']
+            (bool)$_ENV['DISPLAY_ERROR_DETAILS'],
+            (bool)$_ENV['LOG_ERRORS'],
+            (bool)$_ENV['LOG_ERRORS_DETAILS']
         );
 
         return $app;

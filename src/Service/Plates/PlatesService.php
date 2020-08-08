@@ -8,6 +8,6 @@ class PlatesService implements IPlatesService
 {
     public function buildPlatesObject(): Engine
     {
-        return new Engine(__DIR__ . '/../../View', 'phtml');
+        return new Engine(__DIR__ . '/../../../resources/view', 'phtml');
     }
 }

@@ -10,3 +10,11 @@ services:
     volumes:
       - .:/home/web
     command: sh ./docker/web/entrypoint.sh
+    links:
+      - mail
+
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
