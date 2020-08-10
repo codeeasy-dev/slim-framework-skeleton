@@ -1,0 +1,4 @@
+- [] Configure migrations with Phinx
+- [] Configure e-mail service with PHPMailer
+- [] Configure e-mail service with SendGrid
+- [] Configure Doctrine ORM
