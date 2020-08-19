@@ -10,6 +10,7 @@
         <directory name="public" />
         <directory name="src" />
         <directory name="tests" />
+        <directory name="database" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>

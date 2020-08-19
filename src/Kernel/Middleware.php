@@ -21,9 +21,9 @@ class Middleware
 
         $app->addRoutingMiddleware();
         $app->addErrorMiddleware(
-            (bool)$_ENV['DISPLAY_ERROR_DETAILS'],
-            (bool)$_ENV['LOG_ERRORS'],
-            (bool)$_ENV['LOG_ERRORS_DETAILS']
+            (bool)env('DISPLAY_ERROR_DETAILS'),
+            (bool)env('LOG_ERRORS'),
+            (bool)env('LOG_ERRORS_DETAILS'),
         );
 
         return $app;

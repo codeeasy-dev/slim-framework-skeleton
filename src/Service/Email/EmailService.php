@@ -13,19 +13,19 @@ class EmailService implements IEmailService
     {
         $mailer = new PHPMailer();
 
-        if ((bool)$_ENV['EMAIL_IS_SMTP']) {
+        if ((bool)env('EMAIL_IS_SMTP')) {
             $mailer->isSMTP();
         }
 
-        if ((bool)$_ENV['EMAIL_AUTH']) {
+        if ((bool)env('EMAIL_AUTH')) {
             $mailer->SMTPAuth = true;
-            $mailer->Username = $_ENV['EMAIL_USER'];
-            $mailer->Password = $_ENV['EMAIL_PASS'];
+            $mailer->Username = env('EMAIL_USER');
+            $mailer->Password = env('EMAIL_PASS');
         }
 
-        $mailer->Host = $_ENV['EMAIL_HOST'];
-        $mailer->SMTPSecure = $_ENV['EMAIL_SECURE'];
-        $mailer->Port = (int)$_ENV['EMAIL_PORT'];
+        $mailer->Host = env('EMAIL_HOST');
+        $mailer->SMTPSecure = env('EMAIL_SECURE');
+        $mailer->Port = (int)env('EMAIL_PORT');
 
         $mailer->setFrom($data[IEmailService::SENDER]);
         foreach ($data[IEmailService::RECEIVERS] as $receiver) {

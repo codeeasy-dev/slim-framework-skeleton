@@ -4,7 +4,6 @@ namespace App\Kernel;
 
 use App\Routes\MainRoutes;
 use DI\Container;
-use Dotenv\Dotenv;
 use Slim\App;
 use Slim\Factory\AppFactory;
 
@@ -16,8 +15,6 @@ class Server
         $middleware = new Middleware();
 
         $mainRoutes = new MainRoutes();
-
-        $this->configDotenv();
 
         $container = $provider->buildContainer();
         $this->setContainer($container);
@@ -38,11 +35,5 @@ class Server
     private function setContainer(Container $container): void
     {
         AppFactory::setContainer($container);
-    }
-
-    private function configDotenv(): void
-    {
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
-        $dotenv->load();
     }
 }
