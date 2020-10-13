@@ -8,17 +8,10 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class JsonController
 {
-    private IHelloService $hello;
-
-    public function __construct(IHelloService $hello)
-    {
-        $this->hello = $hello;
-    }
-
     public function __invoke(Request $request, Response $response, array $args): Response
     {
         $data = json_encode(
-            ['message' => $this->hello->getMessage()],
+            ['message' => 'Hello World!!!'],
             JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
         );
 

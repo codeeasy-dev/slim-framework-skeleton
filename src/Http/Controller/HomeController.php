@@ -9,12 +9,10 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class HomeController
 {
-    private IHelloService $hello;
     private IPlatesService $plates;
 
-    public function __construct(IHelloService $hello, IPlatesService $plates)
+    public function __construct(IPlatesService $plates)
     {
-        $this->hello = $hello;
         $this->plates = $plates;
     }
 
@@ -24,7 +22,7 @@ class HomeController
             ->buildPlatesObject()
             ->render(
                 'home/index',
-                ['message' => $this->hello->getMessage()]
+                ['message' => 'Hello World!!!']
             );
 
         $response->getBody()->write($body);

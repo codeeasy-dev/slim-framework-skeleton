@@ -2,7 +2,7 @@ version: "3"
 
 services:
   web:
-    build: .
+    image: php:7.4-alpine
     container_name: slim-web
     ports:
       - 8080:8080
@@ -10,24 +10,3 @@ services:
     volumes:
       - .:/home/web
     command: sh ./docker/web/entrypoint.sh
-    links:
-      - mail
-      - db
-
-  mail:
-    image: mailhog/mailhog
-    container_name: slim-mailhog
-    ports:
-      - 1025:1025
-      - 8025:8025
-
-  db:
-    image: mysql:8
-    container_name: slim-db
-    volumes:
-      - ./docker/db/mysql:/var/lib/mysql
-    ports:
-      - "3309:3306"
-    environment:
-      - MYSQL_DATABASE=skeleton
-      - MYSQL_ROOT_PASSWORD=root
