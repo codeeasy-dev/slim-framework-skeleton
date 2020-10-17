@@ -2,26 +2,25 @@
 
 namespace App\Http\Controller;
 
-use App\Service\Hello\IHelloService;
-use App\Service\Plates\IPlatesService;
+use App\Service\Twig\ITwigService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 class HomeController
 {
-    private IPlatesService $plates;
+    private ITwigService $twig;
 
-    public function __construct(IPlatesService $plates)
+    public function __construct(ITwigService $twig)
     {
-        $this->plates = $plates;
+        $this->twig = $twig;
     }
 
     public function __invoke(Request $request, Response $response, array $args): Response
     {
-        $body = $this->plates
-            ->buildPlatesObject()
+        $body = $this->twig
+            ->buildTwigObject()
             ->render(
-                'home/index',
+                'home/index.twig',
                 ['message' => 'Hello World!!!']
             );
 
