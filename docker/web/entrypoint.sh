@@ -1,3 +1,5 @@
+apt-get install dos2unix
+
 FILE = ${PWD}/composer.phar
 DIRECTORY = ${PWD}/vendor
 
