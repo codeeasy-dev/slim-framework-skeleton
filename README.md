@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/codeeasy-dev/slim-framework-skeleton/blob/develop/logo.png?raw=true" alt="Slim Framework Skeleton by Code Easy" />
+    <img src="https://github.com/codeeasy-dev/slim-framework-skeleton/blob/develop/logo.jpg?raw=true" alt="Slim Framework Skeleton by Code Easy" />
 </p>
 
 <p align="center">Uma maneira simples de começar com o Slim Framework tendo o mínimo necessário.</p>
