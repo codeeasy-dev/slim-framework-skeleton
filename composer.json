@@ -19,7 +19,9 @@
     ]
   },
   "require": {
+    "php": "^7.4",
     "slim/slim": "4.*",
+    "ext-json": "*",
     "slim/psr7": "^1.1",
     "nyholm/psr7": "^1.3",
     "nyholm/psr7-server": "^1.0",
