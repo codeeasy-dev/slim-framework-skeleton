@@ -2,6 +2,11 @@
     <img src="https://github.com/codeeasy-dev/slim-framework-skeleton/blob/develop/logo.jpg?raw=true" alt="Slim Framework Skeleton by Code Easy" />
 </p>
 
+<h1 align="center">
+    Slim Framework Skeleton<br/>
+    <p align="center" style="font-size: 18px;">by Code Easy</p>
+</h1>
+
 <p align="center">Uma maneira simples de começar com o Slim Framework tendo o mínimo necessário.</p>
 
 <p align="center">
