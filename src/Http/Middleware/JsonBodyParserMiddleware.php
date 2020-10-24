@@ -10,7 +10,7 @@ use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 class JsonBodyParserMiddleware implements MiddlewareInterface
 {
     /**
-     * Example middleware
+     * JSON request middleware
      *
      * @param Request $request PSR-7 request
      * @param RequestHandler $handler PSR-15 request handler
