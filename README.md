@@ -47,13 +47,13 @@
 
 <table>
   <tr>
-    <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/20212780?v=3" width="100px;" alt=""/><br /><sub><b>Felipe Vieira</b></sub></a><br /><a href="https://github.com/codeeasy-dev/slim-framework-skeleton/commits?author=kentcdoddsfrv-dev" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/frv-dev"><img src="https://avatars.githubusercontent.com/u/20212780?v=3" width="100px;" alt=""/><br /><sub><b>Felipe Vieira</b></sub></a><br /><a href="https://github.com/codeeasy-dev/slim-framework-skeleton/commits?author=frv-dev" title="Code">💻</a></td>
   </tr>
 </table>
 
 ## AUTOR
 
-<a href="https://kentcdodds.com">
+<a href="https://github.com/frv-dev">
     <img src="https://avatars.githubusercontent.com/u/20212780?v=3" width="100px;" alt=""/>
     <br />
     <sub>
