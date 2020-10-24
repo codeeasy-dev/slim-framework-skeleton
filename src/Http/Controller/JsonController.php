@@ -2,7 +2,6 @@
 
 namespace App\Http\Controller;
 
-use App\Service\Hello\IHelloService;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
