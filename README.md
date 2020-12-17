@@ -22,6 +22,7 @@
 * 🚧 Twig cache: Em construção 🚧
 * ⛔ Dockerfile: Não iniciado ⛔
 * ⛔ Slim CSRF: Não iniciado ⛔
+* ⛔ Implementar Strict Types: Não iniciado ⛔
 
 ## FEATURES
 
