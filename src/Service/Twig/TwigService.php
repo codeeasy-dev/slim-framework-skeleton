@@ -12,7 +12,7 @@ class TwigService implements ITwigService
         $loader = new FilesystemLoader(__DIR__ . '/../../../resources/view');
         $options = [];
 
-        if (getenv('TWIG_CACHE')) {
+        if (filter_var($_ENV['TWIG_CACHE'], FILTER_VALIDATE_BOOLEAN)) {
             array_push($options, ['cache' => __DIR__ . '/../../../cache/twig']);
         }
 
