@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="https://github.com/codeeasy-dev/slim-framework-skeleton/blob/develop/logo.jpg?raw=true" alt="Slim Framework Skeleton by Code Easy" />
-</p>
-
 <h1 align="center">
     Slim Framework Skeleton<br/>
 </h1>
