@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Kernel;
 
 use App\Routes\MainRoutes;
@@ -9,8 +11,8 @@ class Server
 {
     public function __construct()
     {
-        $provider = new Provider();
         $middleware = new Middleware();
+        $provider = new Provider();
 
         $mainRoutes = new MainRoutes();
 
