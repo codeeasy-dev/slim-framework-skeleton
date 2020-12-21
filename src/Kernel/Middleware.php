@@ -6,6 +6,8 @@ namespace App\Kernel;
 
 use Slim\App;
 
+use function Helpers\env;
+
 class Middleware
 {
     /**

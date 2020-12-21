@@ -7,6 +7,8 @@ namespace App\Service\Twig;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
+use function Helpers\env;
+
 class TwigService implements ITwigService
 {
     public function buildTwigObject(): Environment
