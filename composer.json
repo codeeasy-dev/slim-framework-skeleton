@@ -15,7 +15,8 @@
       "Test\\": "tests/"
     },
     "files": [
-      "config/env.php"
+      "config/env.php",
+      "config/helpers.php"
     ]
   },
   "require": {

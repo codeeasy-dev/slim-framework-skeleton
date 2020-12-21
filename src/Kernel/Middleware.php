@@ -19,9 +19,9 @@ class Middleware
     {
         $app->addRoutingMiddleware();
         $app->addErrorMiddleware(
-            filter_var($_ENV['DISPLAY_ERROR_DETAILS'], FILTER_VALIDATE_BOOLEAN),
-            filter_var($_ENV['LOG_ERRORS'], FILTER_VALIDATE_BOOLEAN),
-            filter_var($_ENV['LOG_ERRORS_DETAILS'], FILTER_VALIDATE_BOOLEAN),
+            filter_var(env('DISPLAY_ERROR_DETAILS'), FILTER_VALIDATE_BOOLEAN),
+            filter_var(env('LOG_ERRORS'), FILTER_VALIDATE_BOOLEAN),
+            filter_var(env('LOG_ERRORS_DETAILS'), FILTER_VALIDATE_BOOLEAN),
         );
 
         foreach ($this->middlewares as $middleware) {
