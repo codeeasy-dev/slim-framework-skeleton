@@ -13,7 +13,6 @@
 ## STATUS DO PROJETO
 
 * 🚧 Helpers para testes automatizados: Em construção 🚧
-* 🚧 Twig cache: Em construção 🚧
 * ⛔ Slim CSRF: Não iniciado ⛔
 
 ## FEATURES
