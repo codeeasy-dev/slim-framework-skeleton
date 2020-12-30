@@ -14,11 +14,11 @@ class TwigService implements ITwigService
     public function buildTwigObject(): Environment
     {
         $loader = new FilesystemLoader(__DIR__ . '/../../../resources/view');
-        $options = [];
         $appExtension = new AppExtension();
+        $options = [];
 
         if (filter_var(env('TWIG_CACHE'), FILTER_VALIDATE_BOOLEAN)) {
-            array_push($options, ['cache' => __DIR__ . '/../../../cache/twig']);
+            $options[] = ['cache' => __DIR__ . '/../../../cache/twig'];
         }
 
         $environment = new Environment($loader, $options);
