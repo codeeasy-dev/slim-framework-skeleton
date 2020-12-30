@@ -12,8 +12,7 @@
 
 ## STATUS DO PROJETO
 
-* 🚧 Teste automatizados: Em construção 🚧
-* 🚧 Diretório `public`: Em construção 🚧
+* 🚧 Helpers para testes automatizados: Em construção 🚧
 * 🚧 Docker-compose: Em construção 🚧
 * 🚧 Twig cache: Em construção 🚧
 * ⛔ Slim CSRF: Não iniciado ⛔

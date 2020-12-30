@@ -11,5 +11,5 @@ end_of_line = lf
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{yml,json,phtml,html,twig}]
+[{*.{yml,json,phtml,html,twig,xml},web.config,manifest.webmanifest}]
 indent_size = 2
