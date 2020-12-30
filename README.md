@@ -13,7 +13,6 @@
 ## STATUS DO PROJETO
 
 * 🚧 Helpers para testes automatizados: Em construção 🚧
-* 🚧 Docker-compose: Em construção 🚧
 * 🚧 Twig cache: Em construção 🚧
 * ⛔ Slim CSRF: Não iniciado ⛔
 
@@ -30,7 +29,6 @@
 * [Guzzle Http]()
 * [PHP Unit]()
 * [Twig]()
-* [Plates]()
 * [PHP DI]()
 * [Psalm]()
 * [PHP Code Sniffer]()
