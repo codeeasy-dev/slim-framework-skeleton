@@ -12,7 +12,6 @@ class Provider
      * @var array<string,string> $services
      */
     private array $services = [
-        \App\Service\Plates\IPlatesService::class => \App\Service\Plates\PlatesService::class,
         \App\Service\Twig\ITwigService::class => \App\Service\Twig\TwigService::class,
     ];
 

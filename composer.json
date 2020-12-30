@@ -31,7 +31,6 @@
     "laminas/laminas-diactoros": "^2.3",
     "php-di/php-di": "^6.2",
     "vlucas/phpdotenv": "^5.1",
-    "league/plates": "^3.3",
     "twig/twig": "^3.0"
   },
   "require-dev": {
