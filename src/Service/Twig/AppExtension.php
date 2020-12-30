@@ -11,10 +11,12 @@ use Twig\TwigFunction;
 
 class AppExtension extends AbstractExtension
 {
-    private array $functions = [
+    /** @var array<string,string> FUNCTIONS */
+    private const FUNCTIONS = [
         'url' => UrlFunction::class,
     ];
-    private array $filters = [];
+    /** @var array<string,string> FILTERS */
+    private const FILTERS = [];
 
     /**
      * Return an array of custom twig functions
@@ -25,7 +27,7 @@ class AppExtension extends AbstractExtension
     {
         $twigFunctions = [];
 
-        foreach ($this->functions as $functionName => $class) {
+        foreach (self::FUNCTIONS as $functionName => $class) {
             $twigFunctions[] = new TwigFunction($functionName, [new $class(), $functionName]);
         }
 
@@ -41,7 +43,7 @@ class AppExtension extends AbstractExtension
     {
         $twigFilters = [];
 
-        foreach ($this->filters as $filterName => $class) {
+        foreach (self::FILTERS as $filterName => $class) {
             $twigFilters[] = new TwigFilter($filterName, [new $class(), $filterName]);
         }
 
