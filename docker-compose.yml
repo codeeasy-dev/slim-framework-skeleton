@@ -2,11 +2,11 @@ version: "3"
 
 services:
   web:
-    image: php:7.4
+    build: .
     container_name: slim-web
     ports:
       - 8080:8080
-    working_dir: /home/web
+    working_dir: /home/${USER}/project
     volumes:
-      - .:/home/web
-    command: sh ./docker/web/entrypoint.sh
+      - .:/home/${USER}/project
+    command: php -S 0.0.0.0:8080 -t public

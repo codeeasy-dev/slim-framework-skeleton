@@ -16,7 +16,6 @@
 * 🚧 Diretório `public`: Em construção 🚧
 * 🚧 Docker-compose: Em construção 🚧
 * 🚧 Twig cache: Em construção 🚧
-* ⛔ Dockerfile: Não iniciado ⛔
 * ⛔ Slim CSRF: Não iniciado ⛔
 
 ## FEATURES
