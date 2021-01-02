@@ -22,6 +22,7 @@ class Server
         AppFactory::setContainer($container);
 
         $app = AppFactory::create();
+        /** @psalm-suppress PossiblyNullArgument */
         $app->setBasePath(env('ROUTE_RELATIVE_PATH'));
         $app = $middleware->setGlobalMiddlewares($app);
         $app = $mainRoutes->buildMainRoutes($app);
