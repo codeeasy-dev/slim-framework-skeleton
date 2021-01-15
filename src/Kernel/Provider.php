@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Kernel;
 
 use DI\Container;
+use App\Service\Twig\{ITwigService, TwigService};
+use App\Service\Responder\{IResponderService, ResponderService};
 
 class Provider
 {
@@ -12,7 +14,8 @@ class Provider
      * @var array<string,string> $services
      */
     private array $services = [
-        \App\Service\Twig\ITwigService::class => \App\Service\Twig\TwigService::class,
+        ITwigService::class => TwigService::class,
+        IResponderService::class => ResponderService::class,
     ];
 
     public function buildContainer(): Container
