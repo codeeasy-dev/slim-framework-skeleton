@@ -9,4 +9,4 @@ services:
     working_dir: /home/${USER}/project
     volumes:
       - .:/home/${USER}/project
-    command: php -S 0.0.0.0:8080 -t public
+    command: sh ./docker/web/run.sh
