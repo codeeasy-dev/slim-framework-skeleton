@@ -5,8 +5,7 @@ services:
     build: .
     container_name: slim-web
     ports:
-      - 8080:8080
-    working_dir: /home/${USER}/project
+      - 8080:80
     volumes:
-      - .:/home/${USER}/project
+      - .:/var/www/html/
     command: sh ./docker/web/run.sh

@@ -7,4 +7,4 @@ if [ ! -d "vendor/" ]; then
     cp -r ../dependencies/vendor ./
 fi
 
-php -S 0.0.0.0:8080 -t public
+apache2-foreground
