@@ -1,10 +1,10 @@
 FROM php:7.4-apache
 
 # SETTING THE USER DATA
-ARG USER=felipe
+ARG USER=demo
 ARG UID=1000
 ARG GID=1000
-ARG PW=felipe
+ARG PW=demo
 RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
 
 # CHANGING DIRECTORY PERMISSIONS

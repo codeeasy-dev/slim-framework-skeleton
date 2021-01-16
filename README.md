@@ -127,7 +127,7 @@ Se for usar o PHP que está instalado na sua máquina então execute o comando `
 
 ##### 3.2 Docker
 
-Se for usar o docker acesse o arquivo `dockerfile` e altere os conteúdos da linha 2 a linha 6.
+Se for usar o docker acesse o arquivo `dockerfile` e altere os conteúdos da linha 4 a linha 7.
 
 ```dockerfile
 ARG USER=demo
@@ -150,14 +150,14 @@ Depois você pode acessar o `docker-compose.yml` e alterar a porta padrão que e
 
 ```yml
 ports:
-    - <PORTA-A-SER-ALTERADA>:8080
+    - <PORTA-A-SER-ALTERADA>:80
 ```
 
 Exemplo alterando para a porta 8085:
 
 ```yml
 ports:
-    - 8085:8080
+    - 8085:80
 ```
 
 Também é possível alterar o nome do container como é mostrado a baixo:
@@ -171,7 +171,7 @@ services:
 
 Depois disso execute o comando `docker-compose up -d` para montar a imagem e criar o container.
 
-Execute o comando `docker-compose ps` para verificar se o container está em execução e se aparecer `State Up` e `Ports 0.0.0.0:8080-><PORTA-ESCOLHIDA>/tcp` então o container está funcionando.
+Execute o comando `docker-compose ps` para verificar se o container está em execução e se aparecer `State Up` e `Ports 0.0.0.0:80-><PORTA-ESCOLHIDA>/tcp` então o container está funcionando.
 
 Por fim acesse no seu navegador a URL `http://localhost:<PORTA-ESCOLHIDA>`, se aparecer o site então é porque está tudo pronto, agora é só começar a programar.
 
