@@ -7,9 +7,6 @@ ARG GID=1000
 ARG PW=demo
 RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd
 
-# CHANGING DIRECTORY PERMISSIONS
-RUN chown ${UID}:${GID} /var/www/dependencies/
-
 # INSTALLING THE COMPOSER
 RUN apt-get update -y
 RUN apt-get install dos2unix zip unzip wget -y
@@ -29,6 +26,7 @@ RUN cp "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 # INSTALLING THE COMPOSER DEPENDENCIES
 RUN mkdir /var/www/dependencies
+RUN chown ${UID}:${GID} /var/www/dependencies/
 COPY --chown=${UID}:${GID} composer.* /var/www/html/
 RUN composer install
 RUN chown ${UID}:${GID} -R ./vendor/
